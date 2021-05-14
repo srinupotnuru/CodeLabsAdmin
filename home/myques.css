@@ -1,0 +1,42 @@
+img {
+    height: 50px;
+    width: 50px;
+    
+  }
+  time{
+    margin-left: auto;
+}
+.card-header{
+    display:flex;
+    
+}
+#th{
+    margin:10px;
+}
+.card{
+    height: 180px;
+    margin-bottom: 15px;
+}
+
+.card-text{
+    white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.bg{
+    background-color: black;
+}
+#dummy{
+    height: 8vh;
+    width: 100vw;
+}
+img {
+    height: 35px;
+    width: auto;
+    margin-right: 10px;
+    border-radius: 30px;
+  }
+  #name{
+      
+      margin-right: auto;
+  }
