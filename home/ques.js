@@ -18,6 +18,13 @@
       };
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
+    function logOut() {
+      var callBack = (e) => {
+        gotoLogin();
+      };
+      sessionStorage.clear();
+      firebase.auth().signOut().finally(callBack);
+    }
     const data=firebase.firestore().collection('questions').get();
         data.then(querySnapshot => {
           const arr = querySnapshot.docs.map(doc => doc.data())
@@ -54,3 +61,13 @@
         });
     
 });
+function logOut() {
+  var callBack = (e) => {
+    gotoLogin();
+  };
+  sessionStorage.clear();
+  firebase.auth().signOut().finally(callBack);
+}
+function gotoLogin() {
+  window.location.href = "/";
+}

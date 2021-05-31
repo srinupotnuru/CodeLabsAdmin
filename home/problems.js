@@ -6,6 +6,7 @@ $('document').ready(function () {
         sessionStorage.clear();
         firebase.auth().signOut().finally(callBack);
       }
+     
     var firebaseConfig = {
         apiKey: "AIzaSyCxTHYADPh8vbN4cYw9YMB4tvvi_d7VXmg",
         authDomain: "codelabs-4373c.firebaseapp.com",
@@ -53,3 +54,13 @@ $('document').ready(function () {
         });
     
 });
+function logOut() {
+    var callBack = (e) => {
+      gotoLogin();
+    };
+    sessionStorage.clear();
+    firebase.auth().signOut().finally(callBack);
+  }
+  function gotoLogin() {
+    window.location.href = "/";
+  }
