@@ -5,28 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="/__/firebase/8.6.1/firebase-app.js"></script>
-    <script src="/__/firebase/8.6.1/firebase-analytics.js"></script>
-    <script src="/__/firebase/8.6.1/firebase-auth.js"></script>
-    <script src="/__/firebase/8.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css" />
     <script src="./app.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        <img src="log.png" width="auto" alt="">
-      </a>
-    </nav>
-    <div class="jumbotron bgj">
-      <h1 class="display-4">Welcome Back!</h1>
-      <p class="lead">Please login to post your questions.</p>
-    </div>
     
-    <button type="button" class="login-with-google-btn signbt" onclick="gotoLogin()" >
-      Sign in with Google
-    </button>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <script defer src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_6gfl0jjp.json"  background="transparent"  speed="1"   hover loop  autoplay></lottie-player>
+      </div>
+      <div class="col-sm-12 col-md-6 p2">
+        <h1>Welcome back champs 👋</h1>
+        <p>so are you ready for coding ?</p>
+        <h3>Please <h3> <span class="badge bg-secondary">SignIn</span> to get started.</h3></h3>
+        
+        <button  type="button" class="login-with-google-btn" onclick="gotoLogin()" >
+          Sign in with Google
+        </button>
+      </div>
+    </div>
 
   </body>
 </html>
