@@ -28,7 +28,7 @@
     const data=firebase.firestore().collection('questions').get();
         data.then(querySnapshot => {
           const arr = querySnapshot.docs.map(doc => doc.data())
-          var cards='';
+         
           var item='';
           var len = Object.keys(arr).length;
           var u = sessionStorage.getItem('user');
@@ -42,19 +42,7 @@
               
               console.log(arr[i]);
             console.log(arr[i]['author']);
-            cards += '<div class="card">';
-            cards += '<div class="card-header">';
-            cards += arr[i].title;
-            cards += '</div>';
-            cards += '<div class="card-body">';
-            cards += '<b>'+ '<p class="card-title">' + "Description" + '</p>' +'</b>';
-            cards += '<div id="copy">';
-            cards += '<h6>@' + arr[i].author + '</h6>';
-            cards += '<h6>@' + arr[i].lab + '</h6>';
-            cards += '</div>';
-            cards += '<a href="' + i + '"class="btnbtn-primary">SeePaste</a>';
-            cards += '</div>';
-            cards += '</div>';
+          
             item+='<div class="wrapper"><button class="toggle">';
             item+=arr[i].title;
             item+='<i class="fas fa-plus icon"></i></button><div class="content"><p>';
@@ -63,8 +51,6 @@
 
               }
           }
-          console.log(cards);
-        
         $('#accordian').append(item);
 
 
