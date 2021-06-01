@@ -73,4 +73,7 @@ var firebaseConfig = {
             const documents = querySnapshot.docs.map(doc => doc.data())
             console.log(documents);
           });
+          window.alert('Question Posted Successfully');
+          window.location.href = "/home/index.html";
+
   }
