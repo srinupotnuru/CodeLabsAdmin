@@ -47,13 +47,13 @@ var firebaseConfig = {
   }
   function push()
   {
+    console.log("enter to push");
     var qt=document.getElementById('title').value;
-    var cat=document.getElementById("cat").value;
     var des=document.getElementById('desc').value;
     var t=document.getElementById('tag').value;
     var u = sessionStorage.getItem('user');
     u=JSON.parse(u);
-    console.log(u);
+    //console.log(u);
     var id=u.email;
     id=id.substring(0,id.length-4);
     var dt=new Date().getTime();
@@ -61,7 +61,6 @@ var firebaseConfig = {
     const ref_obj = firebase.firestore().collection('questions').doc(id);
           ref_obj.set({
               "title": qt,
-              "lab": cat,
               "description":des,
               "tags":t,
               "author":u.displayName,
@@ -71,9 +70,9 @@ var firebaseConfig = {
           var temp=firebase.firestore().collection('questions').get();
           temp.then(querySnapshot => {
             const documents = querySnapshot.docs.map(doc => doc.data())
-            console.log(documents);
+           // console.log(documents);
           });
           window.alert('Question Posted Successfully');
-          window.location.href = "/home/index.html";
+          //window.location.href = "/home/index.html";
 
   }
