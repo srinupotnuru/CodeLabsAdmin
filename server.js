@@ -11,9 +11,11 @@ app.post("/evaluate", (req, res) => {
   let executable = {
     script: req.body.program,
     language: req.body.lan,
+    stdin:req.body.stdin,
     versionIndex: "0",
     clientId: process.env.clientID,
     clientSecret: process.env.clientSecret,
+
   };
 
   axios

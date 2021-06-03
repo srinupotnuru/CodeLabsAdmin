@@ -151,18 +151,22 @@ function run() {
   bt.disabled = true;
   let code = editor.getValue();
   var e = document.getElementById("langs");
+  var input=document.getElementById('output');
   var value = e.options[e.selectedIndex].value;
   axios
     .post("/evaluate", {
       lan: value,
       program: code,
+      stdin:input.value,
     })
     .then((res) => {
-      alert(res.data);
+      //alert(res.data);
+      document.getElementById('out').innerHTML=res.data;
       bt.disabled = false;
     })
     .catch((err) => {
       alert(err.data);
+      document.getElementById('out').innerHTML=res.data;
       bt.disabled = false;
     });
 }
